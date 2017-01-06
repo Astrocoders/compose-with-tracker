@@ -19,5 +19,5 @@ function composeWithTracker(reactiveMapper) {
 }
 
 module.exports = function(fn, options){
-  return compose(compseWithTracker(fn), options)
+  return compose(composeWithTracker(fn), options)
 }
