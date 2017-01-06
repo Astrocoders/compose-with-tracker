@@ -1,5 +1,5 @@
 var Tracker = require('meteor/tracker').Tracker
-var compose = require('react-komposer')
+var compose = require('react-komposer').compose
 
 function composeWithTracker(reactiveMapper) {
   return function(props, onData, env){
