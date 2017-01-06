@@ -4,7 +4,7 @@
   },
   "name": "compose-with-tracker",
   "description": "react-komposer helper for Meteor Tracker system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "dependencies": {
     "babel-runtime": "^6.20.0",
