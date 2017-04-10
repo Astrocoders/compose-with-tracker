@@ -4,14 +4,14 @@ var compose = require('react-komposer').compose
 function composeWithTracker(reactiveMapper) {
   return function(props, onData, env){
     var trackerCleanup = null;
-    const handler = Tracker.nonreactive(() => {
-      return Tracker.autorun(() => {
+    var handler = Tracker.nonreactive(function() {
+      return Tracker.autorun(function() {
         // assign the custom clean-up function.
         trackerCleanup = reactiveMapper(props, onData, env);
       });
     });
 
-    return () => {
+    return function() {
       if(typeof trackerCleanup === 'function') trackerCleanup();
       return handler.stop();
     };
